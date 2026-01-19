@@ -1,0 +1,22 @@
+[package]
+name = "mdpredict-russian"
+version = "0.1.0"
+edition = "2024"
+description = "Mental disorder prediction based on structural characteristics of Russian written speech"
+authors = ["Mental Health Research"]
+
+[dependencies]
+regex = "1.10"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+rsmorphy = "0.4"
+rsmorphy-dict-ru = "0.1"
+unicode-segmentation = "1.10"
+
+[[bin]]
+name = "mdpredict"
+path = "src/main.rs"
+
+[lib]
+name = "mdpredict_russian"
+path = "src/lib.rs"
